@@ -94,11 +94,12 @@ public class Artista {
 		imprimirTipos();
 
 		if (this.albuns.isEmpty() == true)
-			System.out.print("\nÁlbuns: ");
+			System.out.println("\nÁlbuns: ");
 		else {
 			System.out.println("\nÁlbuns: ");
 			imprimirAlbuns();
 		}
+		System.out.println("\n------------------------");
 	}
 
 	private void imprimirAlbuns() {

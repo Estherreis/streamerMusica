@@ -64,7 +64,7 @@ public class Musica {
 	
 	@Override
 	public String toString() {
-		return "Musica \n Nome: " + nome + "\n Tempo de duracao: " + tempoDuracao;
+		return "\nMusica \n Nome: " + nome + "\n Tempo de duracao: " + tempoDuracao;
 	}
 	
 	public void imprimir() {
@@ -73,7 +73,7 @@ public class Musica {
 		if (this.generos.isEmpty() == true)
 			System.out.println("Generos: ");
 		else {
-			System.out.print("Generos: ");
+			System.out.println("Generos: ");
 			imprimirGeneros();
 		}
 		

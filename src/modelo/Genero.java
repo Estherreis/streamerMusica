@@ -20,7 +20,7 @@ public class Genero {
 
 	@Override
 	public String toString() {
-		return "Genero: " + nome + "";
+		return nome;
 	}
 
 	@Override

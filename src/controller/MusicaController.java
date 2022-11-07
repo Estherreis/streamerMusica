@@ -7,6 +7,7 @@ import modelo.Musica;
 
 public class MusicaController {
 	public List<Musica> musicas = new ArrayList<>();
+	public List<Musica> lixeira;
 	
 	public boolean inserir(Musica musica) {
 		if (musicas.add(musica))
@@ -24,11 +25,14 @@ public class MusicaController {
 		return false;
 	}
 
-	public boolean delete(Musica musica) {
-		if (musicas.remove(musica))
-			return true;
-		return false;
-	}
+	public boolean remover(Musica musica) {
+        if (this.musicas.contains(musica)) {
+            this.lixeira.add(musica);
+            this.musicas.remove(musica);
+            return true;
+        } else
+            return false;
+    }
 
 	public void read() {
 		ordenar();
