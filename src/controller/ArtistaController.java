@@ -27,6 +27,7 @@ public class ArtistaController {
 	public boolean alterar(Artista artista, Artista novoArtista) {
 		if (this.artistas.contains(artista)) {
 			this.artistas.add(this.artistas.indexOf(artista), novoArtista);
+			this.artistas.remove(this.artistas.indexOf(artista));
 			return true;
 		} else
 			return false;

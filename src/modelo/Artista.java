@@ -11,15 +11,17 @@ public class Artista {
 	private LocalDate dataNascimento;
 	private String email;
 	private Nacionalidade nacionalidade;
+	private Sexo genero;
 	private List<TipoArtista> tipo = new ArrayList<>();
 	private List<Album> albuns = new ArrayList<>();
 
-	public Artista(String nome, LocalDate dataNascimento, String email, Nacionalidade nacionalidade, List<TipoArtista> tipo) {
+	public Artista(String nome, LocalDate dataNascimento, String email, Nacionalidade nacionalidade, Sexo genero, List<TipoArtista> tipo) {
 		super();
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.email = email;
 		this.nacionalidade = nacionalidade;
+		this.genero = genero;
 		this.tipo = tipo;
 	}
 	
@@ -46,6 +48,12 @@ public class Artista {
 	}
 	public void setNacionalidade(Nacionalidade nacionalidade) {
 		this.nacionalidade = nacionalidade;
+	}
+	public Sexo getGenero() {
+		return genero;
+	}
+	public void setGenero(Sexo genero) {
+		this.genero = genero;
 	}
 	
 	public List<TipoArtista> getTipo() {
@@ -85,7 +93,7 @@ public class Artista {
 
 	@Override
 	public String toString() {
-		return "Artista \n Nome: " + nome + "\n Data de nascimento: " + dataNascimento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + "\n Email: " + email + "\n "
+		return "Artista \n Nome: " + nome + "\n Data de nascimento: " + dataNascimento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + "\n Email: " + email +"\nSexo: "+this.getGenero()+ "\n "
 				+ nacionalidade;
 	}
 	

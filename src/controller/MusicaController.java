@@ -16,9 +16,8 @@ public class MusicaController {
 	}
 
 	public boolean alterar(Musica musicaAntiga, Musica musicaNova) {
-		int indice = musicas.indexOf(musicaAntiga);
 		if (musicas.contains(musicaAntiga)) {
-			musicas.remove(indice);
+			musicas.remove(musicas.indexOf(musicaAntiga));
 			musicas.add(musicaNova);
 			return true;
 		}
@@ -41,6 +40,10 @@ public class MusicaController {
 
 	public void encontrarNome(String nome){
 		musicas.stream().filter( musica -> musica.getNome().equals(nome)).forEach(musica -> musica.imprimir());
+	}
+	
+	public void encontrarPorArtista(String nomeArtista){
+//		musicas.stream().filter( musica -> (musica.getArtistas().stream().filter(artista -> artista.getNome().equalsIgnoreCase(nomeArtista)))).forEach(artista -> artista.imprimir());
 	}
 
 	public void ordenar() {

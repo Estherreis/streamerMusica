@@ -15,12 +15,14 @@ public class AlbumController {
 	}
 
 	public boolean alterar(Album albumAntigo, Album albumNovo) {
-		int indice = albuns.indexOf(albumAntigo);
 		if (albuns.contains(albumAntigo)) {
-			albuns.remove(indice);
-			albuns.add(albumNovo);
-			return true;
+			
 		}
+//		if (albuns.contains(albumAntigo)) {
+//			albuns.remove(albuns.indexOf(albumAntigo));
+//			albuns.add(albumNovo);
+//			return true;
+//		}
 		return false;
 	}
 
